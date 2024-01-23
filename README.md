@@ -7,5 +7,4 @@ The folder "blog/" is based on Django class-based API ;
 
 folder "news/" is based on djangorestframework , refer to [iThelp](https://ithelp.ithome.com.tw/articles/10234100)
 
-<img src="https://github.com/nova1987a/blog_demo/blob/main/djdemo_snap.jpg" width="500" alt="Blog demo -- snapshot">
-
+<center><img src="https://github.com/nova1987a/blog_demo/blob/main/djdemo_snap.jpg" width="500" alt="Blog demo -- snapshot"></center>
