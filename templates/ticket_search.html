@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block index %}
+
+
+<form action="" method="POST">
+	{% csrf_token %}
+	<input name="city_name" placeholder="Plz input a city name" >
+	<input type="submit" value="search">
+</form>
+<table class="table">
+	<thead>
+		<tr>
+			<th>TicketName</th>
+			<th>Price</th>
+			<th>Earliest time to use</th>
+			<th>Comment</th>
+			<th>Source</th>
+		</tr>
+	<thead>
+	<tbody>
+		{% for ticket in tickets %}
+		<tr>
+			<td><a href="{{ ticket.link }}" target="_blank">{{ ticket.title }}</a></td>
+			<td>{{ ticket.booking_date }}</td>
+			<td>{{ ticket.booking_date }}</td>
+			<td>{{ ticket.star }}</td>
+			<td><img src={{ ticket.source }} style="width:32px; height:32px"></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

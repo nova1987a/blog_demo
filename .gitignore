@@ -1,0 +1,6 @@
+*.log
+*.dat
+web_scrape.py
+__pycache__
+tmp/
+migrations/

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block index %}
+<div class="row pt-3 ps-3">
+	<section></section>
+	<script type="text/javaScript">
+		var section = document.querySelector("section");
+
+		var requestURL = "http://djdemo.guosi.site/news/report_json/";
+		var request = new XMLHttpRequest();
+		request.open("GET", requestURL);
+
+		request.responseType = "json";
+		request.send();
+		
+		request.onload = function () {
+			var mainArticles = request.response;
+			showArticles(mainArticles);	// function showTitles
+		};
+		
+		function showArticles(jsonObj) {
+			var articles = jsonObj["data"];
+
+			for (i = 0; i < articles.length; i++) {
+				var myArticle = document.createElement("article");
+				var myH2 = document.createElement("h2");
+				var myPara1 = document.createElement("p");
+				var myPara2 = document.createElement("p");
+				
+				// Add title and created_on
+				myH2.textContent = articles[i].title;
+				myPara1.textContent = "Created on: " + articles[i].created_on;
+
+				// Add content
+				myPara2.textContent = "Content: " + articles[i].content;
+
+				myArticle.appendChild(myH2);
+				myArticle.appendChild(myPara1);
+				myArticle.appendChild(myPara2);
+
+				section.appendChild(myArticle);
+			}
+		}
+	</script>
+</div>
+{% endblock %}
+

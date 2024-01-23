@@ -1,0 +1,6 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/w9saka5ulbu0/public_html/djdemo"
+PassengerBaseURI "/"
+PassengerPython "/home/w9saka5ulbu0/virtualenv/public_html/djdemo/3.9/bin/python"
+PassengerAppLogFile "/home/w9saka5ulbu0/public_html/djdemo/djdemo.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

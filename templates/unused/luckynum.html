@@ -1,0 +1,15 @@
+{% block luckynum%}
+
+    <div class="card my-4">
+        <h5 class="card-header">Lottery Numbers</h5>
+        <div class="card-body">
+            <p class="card-text">Show the key & value items</p>
+            
+            {% for key, value in r.items %}
+                <h5 class="card-text">Key:Value</h5>
+	            <p class="card-text">{{ key }}: {{ value }}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock luckynum %}

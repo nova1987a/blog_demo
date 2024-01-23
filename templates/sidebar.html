@@ -1,0 +1,31 @@
+{% block sidebar %}
+
+<!-- Sidebar Widgets Column -->
+
+	<div class="card my-4">
+        	<h5 class="card-header">About Us</h5>
+   	        <div class="card-body">
+		    <p class="card-text"> This awesome blog is made on the top of our Favourite full stack Framework 'Django'..!</p>
+		    <a href="https://www.djangoproject.com/" class="btn btn-danger">Know more!</a>
+	        </div>
+	</div>
+	<!--div class="card my-4" >
+                <h5 class="card-header text-center"> Let's get lucky numbers!</h5>
+                <div class="card-body">
+                {% for key, values in r_num.items %}
+        	        <h6 class="card-text text-center">{{key}}</h6>
+                        <!--h6 class="card-subtitle muted text-center">Let's get some lucky numbers! :-)<!--/h6>
+                        <div class="row justify-content-md-center alert alert-primary">
+                                {%  for value in values %}
+                                        <div class="col-2 ">{{ value }}</div>
+                                {% endfor %}
+                        </div>
+                        {% endfor %}
+                </div>
+        </div>
+
+	
+<!--/div-->
+
+{% endblock sidebar %}
+

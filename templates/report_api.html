@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block index %}
+<ul>
+	<div class="col-md-8 mt-3 left">
+	{% for report in reports %}
+		<li>{{ report.title }}</li>
+		<p>{{ report.created_on }}</p>
+		<p>{{ report.content }}</p>
+	{% endfor %}
+	</div>
+</ul>
+{% endblock %}
